@@ -35,6 +35,9 @@ require_once dirname(__DIR__) . '/config/config.php';
                     <li><a href="<?php echo BASE_URL; ?>views/contacto.php"><i class="fa-solid fa-envelope"></i> Contacto</a></li>
                     <li><a href="#"><i class="fa-solid fa-hand-holding-heart"></i> Donaciones</a></li>
                     <?php if (isset($_SESSION['usuario'])): ?>
+                        <?php if (isset($_SESSION['rol']) && $_SESSION['rol'] === 'admin'): ?>
+                            <li><a href="<?php echo BASE_URL; ?>views/admin/panel.php" class="btn-admin-link"><i class="fa-solid fa-user-shield"></i> Panel Admin</a></li>
+                        <?php endif; ?>
                         <li><span class="user-greeting"><i class="fa-solid fa-circle-user"></i> Hola, <?php echo htmlspecialchars($_SESSION['usuario']); ?></span></li>
                         <li><a href="<?php echo BASE_URL; ?>views/logout.php" class="btn-logout"><i class="fa-solid fa-right-from-bracket"></i> Cerrar Sesión</a></li>
                     <?php else: ?>

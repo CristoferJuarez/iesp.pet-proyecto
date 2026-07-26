@@ -22,11 +22,17 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $usuario = $stmt->fetch();
 
         if ($usuario && password_verify($contrasena, $usuario['contrasena'])) {
+            $_SESSION['usuario_id'] = $usuario['id'];
             $_SESSION['usuario'] = $usuario['nombre'];
             $_SESSION['correo'] = $usuario['correo'];
+            $_SESSION['rol'] = $usuario['rol']; // Guardamos el rol ('admin' o 'usuario')
             
-            // Redirigir al inicio después de un login exitoso
-            header('Location: ' . BASE_URL . 'index.php');
+            // Redirigir según el rol del usuario
+            if ($usuario['rol'] === 'admin') {
+                header('Location: ' . BASE_URL . 'views/admin/panel.php');
+            } else {
+                header('Location: ' . BASE_URL . 'index.php');
+            }
             exit;
         } else {
             $error_mensaje = 'El correo electrónico o la contraseña son incorrectos.';
