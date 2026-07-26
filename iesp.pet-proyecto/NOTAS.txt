@@ -1,0 +1,38 @@
+iesp.pet-proyecto/
+│
+├── config/                         # Configuraciones globales del sistema
+│   ├── config.php                  # Constantes BASE_URL, SITE_NAME e inicio de sesión global
+│   └── db_connection.php           # Conexión a MySQL con PDO (base de datos: refugio_patitas)
+│
+├── includes/                       # Componentes reutilizables (modularización)
+│   ├── header.php                  # Header global: logo, nav con dropdown Catálogo, Font Awesome CDN
+│   └── footer.php                  # Footer global: créditos del proyecto
+│
+├── mascotas/                       # Páginas de catálogo por especie (fuera de views/)
+│   ├── perros.php                  # Listado dinámico de perros desde la BD
+│   └── gatos.php                   # Listado dinámico de gatos desde la BD
+│
+├── public-assets/                  # Recursos estáticos del sitio (CSS, imágenes, JS)
+│   ├── css/
+│   │   ├── indexador.css           # Importador global (@import) de todos los CSS
+│   │   ├── globales.css            # Reset, body, botones, header, footer, dropdown, alertas
+│   │   ├── index.css               # Estilos del inicio (hero + tarjetas informativas)
+│   │   ├── catalogo.css            # Tarjetas de mascotas, filtros, badges, grid responsive
+│   │   ├── formulario.css          # Formulario de adopción: inputs, labels, alertas
+│   │   ├── contacto.css            # Página de contacto: Flexbox de 2 columnas, redes
+│   │   └── login.css               # Estilos compartidos de Login y Registro
+│   └── img/
+│       ├── mascotas/               # Fotos de los animales (perros y gatos)
+│       └── logo.png                # Logo del refugio
+│
+├── views/                          # Páginas secundarias del sitio
+│   ├── catalogo.php                # Catálogo general con filtros por especie (dinámico desde BD)
+│   ├── formulario.php              # Formulario de postulación de adopción (guarda en BD)
+│   ├── contacto.php                # Página de contacto (guarda mensajes en BD)
+│   ├── login.php                   # Inicio de sesión con validación contra BD (password_verify)
+│   ├── logout.php                  # Cierre de sesión (destruye sesión y redirige)
+│   └── registro.php                # Registro de nuevos usuarios (bcrypt + auto-login)
+│
+├── index.php                       # Página de inicio (Home) con hero y tarjetas informativas
+└── NOTAS.txt                       # Este archivo — Estructura y notas del proyecto
+└── database.sql                    # Esquema SQL: tablas usuarios, mascotas, postulaciones, mensajes_contacto
