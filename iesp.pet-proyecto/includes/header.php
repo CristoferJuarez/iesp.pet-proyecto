@@ -33,7 +33,6 @@ require_once dirname(__DIR__) . '/config/config.php';
                     </li>
                     <li><a href="<?php echo BASE_URL; ?>views/formulario.php"><i class="fa-solid fa-file-signature"></i> Postular Adopción</a></li>
                     <li><a href="<?php echo BASE_URL; ?>views/contacto.php"><i class="fa-solid fa-envelope"></i> Contacto</a></li>
-                    <li><a href="#"><i class="fa-solid fa-hand-holding-heart"></i> Donaciones</a></li>
                     <?php if (isset($_SESSION['usuario'])): ?>
                         <li><span class="user-greeting"><i class="fa-solid fa-circle-user"></i> Hola, <?php echo htmlspecialchars($_SESSION['usuario']); ?></span></li>
                         <li><a href="<?php echo BASE_URL; ?>views/logout.php" class="btn-logout"><i class="fa-solid fa-right-from-bracket"></i> Cerrar Sesión</a></li>

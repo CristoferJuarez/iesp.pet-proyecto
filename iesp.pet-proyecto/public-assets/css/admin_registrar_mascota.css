@@ -1,0 +1,324 @@
+/* ==========================================================================
+   ESTILOS PARA LA VISTA DE ADMINISTRADOR - REGISTRO DE MASCOTAS
+   (Estilo armonizado con la paleta warm/earthy de Refugio Patitas)
+   ========================================================================== */
+
+.admin-registrar-container {
+    max-width: 860px;
+    margin: 2.5rem auto;
+    padding: 0 1.5rem;
+}
+
+/* Banner de Encabezado Admin */
+.admin-banner-header {
+    background: linear-gradient(135deg, #4a3e3d 0%, #342a29 100%);
+    color: #ffffff;
+    padding: 2.25rem 2rem;
+    border-radius: 16px;
+    margin-bottom: 2rem;
+    box-shadow: 0 10px 25px -5px rgba(74, 62, 61, 0.25);
+    border: 2px solid #8c6239;
+    position: relative;
+    overflow: hidden;
+}
+
+.admin-banner-header::after {
+    content: '\f6d3';
+    font-family: 'Font Awesome 6 Free';
+    font-weight: 900;
+    position: absolute;
+    right: -15px;
+    bottom: -25px;
+    font-size: 9.5rem;
+    color: rgba(255, 255, 255, 0.04);
+    pointer-events: none;
+}
+
+.admin-badge-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: #e65100;
+    color: #ffffff;
+    padding: 0.35rem 0.9rem;
+    border-radius: 9999px;
+    font-weight: 700;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    margin-bottom: 0.9rem;
+    box-shadow: 0 3px 8px rgba(230, 81, 0, 0.3);
+}
+
+.admin-banner-header h1 {
+    font-size: 1.85rem;
+    font-weight: 800;
+    color: #ffffff;
+    margin-bottom: 0.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.admin-banner-header h1 i {
+    color: #f6c085;
+}
+
+.admin-banner-header p {
+    color: #d1c4c2;
+    font-size: 0.98rem;
+    line-height: 1.5;
+}
+
+/* Tarjeta del Formulario */
+.admin-card-form {
+    background: #ffffff;
+    border-radius: 16px;
+    padding: 2.25rem 2.5rem;
+    box-shadow: 0 8px 24px rgba(140, 98, 57, 0.08);
+    border: 1px solid #f0e2d5;
+}
+
+.admin-form-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+}
+
+.admin-form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.admin-form-group.full-width {
+    grid-column: span 2;
+}
+
+.admin-form-group label {
+    font-weight: 700;
+    color: #5c3a21;
+    font-size: 0.93rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.admin-form-group label i {
+    color: #8c6239;
+}
+
+/* Campos de entrada */
+.admin-input,
+.admin-select,
+.admin-textarea {
+    width: 100%;
+    padding: 0.8rem 1rem;
+    border: 1.5px solid #e0d5cb;
+    border-radius: 10px;
+    font-size: 0.94rem;
+    font-family: inherit;
+    color: #4a3e3d;
+    background-color: #fdfdfd;
+    transition: all 0.25s ease;
+}
+
+.admin-input:focus,
+.admin-select:focus,
+.admin-textarea:focus {
+    outline: none;
+    border-color: #8c6239;
+    background-color: #ffffff;
+    box-shadow: 0 0 0 3px rgba(140, 98, 57, 0.15);
+}
+
+.admin-input::placeholder,
+.admin-textarea::placeholder {
+    color: #b8aca9;
+}
+
+.admin-textarea {
+    resize: vertical;
+    min-height: 110px;
+}
+
+/* Área de Carga de Imagen */
+.image-upload-wrapper {
+    position: relative;
+    border: 2px dashed #d8c8b8;
+    border-radius: 12px;
+    padding: 2rem 1.5rem;
+    text-align: center;
+    background-color: #fcf8f2;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    overflow: hidden;
+}
+
+.image-upload-wrapper:hover,
+.image-upload-wrapper.dragover {
+    border-color: #8c6239;
+    background-color: #f7ede2;
+}
+
+.image-upload-input {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.upload-placeholder {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.6rem;
+    color: #6b5b59;
+}
+
+.upload-placeholder i {
+    font-size: 2.6rem;
+    color: #8c6239;
+    transition: transform 0.3s ease;
+}
+
+.image-upload-wrapper:hover .upload-placeholder i {
+    transform: translateY(-4px);
+    color: #6f4e2c;
+}
+
+.upload-placeholder span.primary-text {
+    font-weight: 700;
+    color: #5c3a21;
+    font-size: 0.98rem;
+}
+
+.upload-placeholder span.secondary-text {
+    font-size: 0.83rem;
+    color: #8a7a78;
+}
+
+/* Previsualización de Imagen */
+.image-preview-box {
+    display: none;
+    position: relative;
+    margin-top: 0.8rem;
+    border-radius: 12px;
+    overflow: hidden;
+    max-height: 260px;
+    border: 2px solid #e0d5cb;
+    box-shadow: 0 4px 12px rgba(140, 98, 57, 0.1);
+}
+
+.image-preview-box img {
+    width: 100%;
+    height: 260px;
+    object-fit: cover;
+}
+
+.image-preview-remove {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    background: rgba(201, 48, 44, 0.9);
+    color: #ffffff;
+    border: none;
+    border-radius: 50%;
+    width: 34px;
+    height: 34px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.2s ease, transform 0.2s ease;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.image-preview-remove:hover {
+    background: #c9302c;
+    transform: scale(1.1);
+}
+
+/* Botones y Acciones */
+.admin-form-actions {
+    margin-top: 2rem;
+    display: flex;
+    gap: 1rem;
+    justify-content: flex-end;
+    border-top: 1px dashed #f0e2d5;
+    padding-top: 1.5rem;
+}
+
+.btn-admin-submit {
+    background-color: #8c6239;
+    color: #ffffff;
+    padding: 0.85rem 2rem;
+    border-radius: 10px;
+    font-weight: 700;
+    font-size: 0.96rem;
+    border: none;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+    box-shadow: 0 4px 14px rgba(140, 98, 57, 0.25);
+    transition: all 0.25s ease;
+}
+
+.btn-admin-submit:hover {
+    background-color: #6f4e2c;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 18px rgba(140, 98, 57, 0.35);
+}
+
+.btn-admin-cancel {
+    background-color: #f4ece1;
+    color: #5c3a21;
+    padding: 0.85rem 1.5rem;
+    border-radius: 10px;
+    font-weight: 600;
+    font-size: 0.96rem;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: all 0.2s ease;
+    border: 1px solid #e6dacb;
+}
+
+.btn-admin-cancel:hover {
+    background-color: #e6dacb;
+    color: #3b2312;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .admin-form-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .admin-form-group.full-width {
+        grid-column: span 1;
+    }
+
+    .admin-banner-header {
+        padding: 1.75rem 1.25rem;
+    }
+
+    .admin-card-form {
+        padding: 1.5rem;
+    }
+
+    .admin-form-actions {
+        flex-direction: column-reverse;
+    }
+
+    .btn-admin-submit,
+    .btn-admin-cancel {
+        width: 100%;
+        justify-content: center;
+    }
+}

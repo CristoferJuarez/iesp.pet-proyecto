@@ -52,6 +52,19 @@ try {
                 <a href="<?php echo BASE_URL; ?>views/admin/usuarios.php" class="btn btn-secondary" style="font-size: 0.85rem; padding: 6px 14px;">
                     <i class="fa-solid fa-list-check"></i> Ver Lista Completa
                 </a>
+        <div class="info-cards" style="max-width: 900px; margin: 0 auto;">
+            <div class="card" style="border: 2px solid #8c6239; background-color: #fdfbf7;">
+                <h3><i class="fa-solid fa-plus-circle" style="color: #8c6239;"></i> Registrar Nueva Mascota</h3>
+                <p>Agrega un nuevo perro, gato u otro animal al refugio completando su nombre, especie, edad, descripción y subiendo su fotografía.</p>
+                <div style="margin-top: 1.25rem;">
+                    <a href="<?php echo BASE_URL; ?>views/admin/registrar_mascota.php" class="btn btn-primary" style="background-color: #8c6239; color: #fff; text-decoration: none; display: inline-flex; align-items: center; gap: 0.5rem;">
+                        <i class="fa-solid fa-paw"></i> Ir al Formulario de Registro
+                    </a>
+                </div>
+            </div>
+            <div class="card">
+                <h3><i class="fa-solid fa-folder-open"></i> Vista Administrativa</h3>
+                <p>Esta carpeta <code>views/admin/</code> está protegida y es visible únicamente para el usuario con rol de Administrador.</p>
             </div>
 
             <div class="card" style="text-align: center; padding: 1.8rem; border-top: 4px solid #0288d1;">
