@@ -1,5 +1,7 @@
 /* --- Reset & Base --- */
-*, *::before, *::after {
+*,
+*::before,
+*::after {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -145,6 +147,25 @@ img {
     white-space: nowrap;
 }
 
+.btn-admin-link {
+    font-weight: 700;
+    font-size: 0.88rem;
+    color: #e65100 !important;
+    background-color: #fff3e0;
+    padding: 6px 12px;
+    border-radius: 20px;
+    border: 1px solid #ffe0b2;
+    transition: background-color 0.25s ease, color 0.25s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.btn-admin-link:hover {
+    background-color: #ffe0b2;
+    color: #bf360c !important;
+}
+
 /* Botón cerrar sesión */
 .btn-logout {
     font-weight: 600;
@@ -236,8 +257,15 @@ img {
 }
 
 @keyframes fadeSlideDown {
-    from { opacity: 0; transform: translateY(-6px); }
-    to   { opacity: 1; transform: translateY(0); }
+    from {
+        opacity: 0;
+        transform: translateY(-6px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 /* --- Footer --- */
@@ -322,7 +350,17 @@ img {
 }
 
 @keyframes shake {
-    0%, 100% { transform: translateX(0); }
-    25%       { transform: translateX(-5px); }
-    75%       { transform: translateX(5px); }
+
+    0%,
+    100% {
+        transform: translateX(0);
+    }
+
+    25% {
+        transform: translateX(-5px);
+    }
+
+    75% {
+        transform: translateX(5px);
+    }
 }

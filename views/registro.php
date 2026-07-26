@@ -45,9 +45,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                     ':contrasena' => $hash,
                 ]);
 
-                // Iniciar sesión automáticamente tras el registro
-                $_SESSION['usuario'] = $nombre;
-                $_SESSION['correo']  = $correo;
+                // Iniciar sesión automáticamente tras el registro (rol usuario por defecto)
+                $_SESSION['usuario_id'] = $pdo->lastInsertId();
+                $_SESSION['usuario']    = $nombre;
+                $_SESSION['correo']     = $correo;
+                $_SESSION['rol']        = 'usuario';
                 header('Location: ' . BASE_URL . 'index.php');
                 exit;
             }
