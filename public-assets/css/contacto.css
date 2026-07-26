@@ -1,0 +1,171 @@
+/* --- CONTACTO --- */
+.contacto-page {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 40px 24px;
+}
+
+/* --- Cabecera --- */
+.contacto-header {
+    text-align: center;
+    margin-bottom: 44px;
+}
+
+.contacto-header h2 {
+    font-size: 2rem;
+    color: #5c3a21;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+}
+
+.contacto-header p {
+    color: #6b5b59;
+    font-size: 1.02rem;
+    line-height: 1.6;
+}
+
+/* --- Rejilla de dos columnas --- */
+.contacto-grid {
+    display: flex;
+    gap: 28px;
+    align-items: flex-start;
+}
+
+.contacto-info-caja,
+.contacto-formulario-caja {
+    flex: 1;
+    background-color: #ffffff;
+    padding: 36px;
+    border-radius: 16px;
+    border: 1px solid #f0e2d5;
+    box-shadow: 0 4px 18px rgba(140, 98, 57, 0.04);
+}
+
+.contacto-info-caja {
+    flex: 0 0 340px;
+}
+
+/* --- Subtítulos de caja --- */
+.contacto-grid h3 {
+    font-size: 1.25rem;
+    color: #5c3a21;
+    margin-bottom: 18px;
+    padding-bottom: 12px;
+    border-bottom: 2px solid #fdf0e4;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* --- Lista de detalles de contacto --- */
+.lista-contacto-detalles {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 24px 0;
+}
+
+.lista-contacto-detalles li {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    margin-bottom: 18px;
+    color: #555;
+    font-size: 0.93rem;
+    line-height: 1.5;
+}
+
+.lista-contacto-detalles li i {
+    color: #8c6239;
+    font-size: 1rem;
+    margin-top: 2px;
+    flex-shrink: 0;
+    width: 18px;
+    text-align: center;
+}
+
+.lista-contacto-detalles strong {
+    display: block;
+    color: #5c3a21;
+    margin-bottom: 2px;
+    font-weight: 600;
+}
+
+/* --- Sección de redes sociales --- */
+.contacto-redes {
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px dashed #e8ddd5;
+}
+
+.contacto-redes h4 {
+    color: #5c3a21;
+    margin-bottom: 14px;
+    font-size: 0.95rem;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.redes-iconos {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.red-enlace {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    padding: 8px 16px;
+    border-radius: 8px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    transition: opacity 0.2s ease, transform 0.2s ease;
+    text-decoration: none;
+}
+
+.red-enlace:hover {
+    opacity: 0.85;
+    transform: translateY(-2px);
+}
+
+.facebook  { background-color: #e8f0fe; color: #1a73e8; }
+.instagram { background-color: #fce8e6; color: #d93025; }
+.tiktok    { background-color: #f3f3f3; color: #202124; }
+
+/* --- Formulario de contacto --- */
+.contacto-formulario-caja .grupo-formulario {
+    margin-bottom: 20px;
+}
+
+.contacto-formulario-caja label {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    margin-bottom: 8px;
+    color: #5c3a21;
+    font-weight: 600;
+    font-size: 0.92rem;
+}
+
+/* --- Responsive --- */
+@media (max-width: 860px) {
+    .contacto-grid {
+        flex-direction: column;
+    }
+
+    .contacto-info-caja {
+        flex: none;
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .contacto-info-caja,
+    .contacto-formulario-caja {
+        padding: 26px 18px;
+    }
+}

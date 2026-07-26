@@ -1,0 +1,162 @@
+/* --- formulario --- */
+.formulario-page {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 24px;
+}
+
+/* --- Cabecera de sección --- */
+.formulario-header {
+    text-align: center;
+    margin-bottom: 36px;
+}
+
+.formulario-header h2 {
+    font-size: 2rem;
+    color: #5c3a21;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+}
+
+.formulario-header p {
+    color: #6b5b59;
+    font-size: 1.02rem;
+    line-height: 1.6;
+}
+
+/* Resaltar nombre de la mascota */
+.resaltar-mascota {
+    color: #7ca67b;
+    font-size: 1.1rem;
+    background-color: #f3f9f3;
+    padding: 2px 9px;
+    border-radius: 6px;
+    border: 1px solid #c3e6c3;
+    font-weight: 600;
+}
+
+/* --- Caja contenedora del formulario --- */
+.form-adopcion {
+    max-width: 620px;
+    margin: 0 auto;
+    background-color: #ffffff;
+    padding: 40px 36px;
+    border-radius: 16px;
+    border: 1px solid #f0e2d5;
+    box-shadow: 0 6px 20px rgba(140, 98, 57, 0.05);
+}
+
+/* --- Grupos de campos --- */
+.grupo-formulario {
+    margin-bottom: 22px;
+}
+
+.grupo-formulario label {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    margin-bottom: 8px;
+    color: #5c3a21;
+    font-weight: 600;
+    font-size: 0.93rem;
+}
+
+/* --- Campos de entrada, textarea y select --- */
+.campo-entrada {
+    width: 100%;
+    padding: 11px 15px;
+    border-radius: 8px;
+    border: 1.5px solid #e0d5cb;
+    background-color: #fdfdfd;
+    color: #333;
+    font-family: inherit;
+    font-size: 0.94rem;
+    transition: border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.campo-entrada:focus {
+    outline: none;
+    border-color: #7ca67b;
+    box-shadow: 0 0 0 3px rgba(124, 166, 123, 0.15);
+    background-color: #fafff9;
+}
+
+.campo-entrada::placeholder {
+    color: #b8aca9;
+}
+
+.area-texto {
+    min-height: 120px;
+    resize: vertical;
+    line-height: 1.55;
+}
+
+/* --- Botón de envío --- */
+.btn-enviar {
+    width: 100%;
+    padding: 13px;
+    font-size: 1rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+/* --- Alertas inline (éxito y error) --- */
+.alerta-exito,
+.alerta-error {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 16px;
+    border-radius: 9px;
+    margin: 0 auto 26px auto;
+    max-width: 620px;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+.alerta-exito {
+    background-color: #f0f7f0;
+    border: 1px solid #c3e6c3;
+    color: #2b542c;
+}
+
+.alerta-error {
+    background-color: #fdf2f2;
+    border: 1px solid #f8d7da;
+    color: #c9302c;
+    animation: shake 0.4s ease-in-out;
+}
+
+.alerta-icono {
+    font-size: 1.1rem;
+    flex-shrink: 0;
+}
+
+.alerta-texto {
+    flex: 1;
+    line-height: 1.4;
+}
+
+/* --- Divisor opcional --- */
+.form-divisor {
+    border: none;
+    border-top: 1px dashed #f0e2d5;
+    margin: 24px 0;
+}
+
+/* --- Responsive --- */
+@media (max-width: 600px) {
+    .form-adopcion {
+        padding: 28px 20px;
+    }
+
+    .formulario-header h2 {
+        font-size: 1.65rem;
+    }
+}

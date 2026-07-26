@@ -1,0 +1,155 @@
+/* --- login --- */
+.login-page-layout {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: calc(100vh - 180px);
+    padding: 40px 24px;
+}
+
+.login-section {
+    width: 100%;
+}
+
+/* --- Tarjeta del formulario --- */
+.login-container {
+    max-width: 470px;
+    margin: 0 auto;
+    background-color: #ffffff;
+    padding: 46px 38px;
+    border-radius: 18px;
+    border: 1px solid #f0e2d5;
+    box-shadow: 0 10px 32px rgba(140, 98, 57, 0.07);
+    transition: box-shadow 0.3s ease;
+}
+
+.login-container:hover {
+    box-shadow: 0 16px 40px rgba(140, 98, 57, 0.11);
+}
+
+/* --- Encabezado de la tarjeta --- */
+.login-header {
+    text-align: center;
+    margin-bottom: 32px;
+}
+
+.login-header h2 {
+    font-size: 2rem;
+    color: #5c3a21;
+    margin-bottom: 8px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.login-header p {
+    color: #7a6a68;
+    font-size: 0.92rem;
+    line-height: 1.5;
+}
+
+/* --- Grupos de campos  --- */
+.grupo-formulario {
+    margin-bottom: 20px;
+}
+
+.grupo-formulario label {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    margin-bottom: 8px;
+    color: #5c3a21;
+    font-weight: 600;
+    font-size: 0.92rem;
+}
+
+/* --- Opciones  --- */
+.login-opciones {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 24px;
+    font-size: 0.88rem;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.opcion-recordar {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    cursor: pointer;
+}
+
+.opcion-recordar input[type="checkbox"] {
+    accent-color: #7ca67b;
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+}
+
+.opcion-recordar label {
+    color: #6b5b59;
+    cursor: pointer;
+    user-select: none;
+    font-weight: 500;
+}
+
+.enlace-olvido {
+    color: #8c6239;
+    font-weight: 600;
+    transition: color 0.25s ease;
+}
+
+.enlace-olvido:hover {
+    color: #7ca67b;
+    text-decoration: underline;
+}
+
+/* --- Botón de envío --- */
+.formulario-botones {
+    margin-top: 4px;
+}
+
+.btn-enviar {
+    width: 100%;
+    padding: 13px;
+    font-size: 1rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+/* --- Pie de la tarjeta  --- */
+.login-ayuda {
+    margin-top: 28px;
+    text-align: center;
+    border-top: 1px solid #f5ebe0;
+    padding-top: 20px;
+}
+
+.login-ayuda p {
+    font-size: 0.87rem;
+    color: #9b8a88;
+    line-height: 1.5;
+}
+
+/* --- Responsive --- */
+@media (max-width: 520px) {
+    .login-container {
+        padding: 32px 22px;
+    }
+
+    .login-header h2 {
+        font-size: 1.65rem;
+    }
+
+    .login-opciones {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
